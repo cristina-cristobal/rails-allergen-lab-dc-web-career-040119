@@ -1,0 +1,9 @@
+<h1><%= @user.name %>'s Recipes</h1>
+<ul>
+  <% @user.recipes.each do |t| %>
+  <li><%= t.name %></li>
+  <% end %>
+</ul><br>
+<%= form_tag user_path(@user), method:"DELETE" do %>
+<%= submit_tag "Delete User" %>
+<% end %>

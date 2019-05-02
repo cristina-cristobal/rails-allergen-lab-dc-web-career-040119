@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :allergens
   # resources :recipe_ingredients
   resources :ingredients, only: [:index, :show]
   resources :recipes, only: [:index, :show, :new, :create]
